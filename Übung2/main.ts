@@ -1,3 +1,5 @@
+//namespace verwenden
+
 let subjects: String[];
 let verbs: String[];
 let objects: String[];
@@ -19,7 +21,7 @@ if (subjects.length > minLength) {
 }
 
 
-function nicerRhymer(length:number): void {
+function nicerRhymer(length:number): void {  //Funktionsname beschreibt nicht eindeutig eine Aktivität
     let usedSubjects: number[] = randomIntArray(length);
     let usedVerbs: number[] = randomIntArray(length);
     let usedObjects: number[] = randomIntArray(length);
@@ -29,10 +31,10 @@ function nicerRhymer(length:number): void {
         }
 }
 
-function randomIntArray(length: number): any {
+function randomIntArray(length: number): any { //formale Parameter mit _ versehen
     let rand: number[];
     let min: number = 0;
-    let max: number = length - 1;
+    let max: number = length - 1; // max / min als Präfix verwenden, für die Eindeutigkeit wäre hier eine weitere Ergänzung sinnvoll
     let i: number = 0;
     let current: number = randomInteger(min, max);
 
@@ -47,6 +49,7 @@ function randomIntArray(length: number): any {
     }
 }
 
-function randomInteger(min: number, max: number): any {
+//Funktionsname beschreibt keine Aktivität oder Frage
+function randomInteger(min: number, max: number): any { 
     return Math.floor(Math.random() * (max - min + 1));
 }
